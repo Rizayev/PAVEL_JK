@@ -1,0 +1,249 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1210px) and (max-width: 1400px) {
+    .feature_item {
+        max-width: 350px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .feature_item {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1024px) {
+    .how-to-buy .qa {
+        width: 100%;
+    }
+
+    .order_consult {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .how-to-buy .qa {
+        padding: 60px 40px;
+    }
+
+    .footer_items {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    footer .logo {
+        margin-bottom: 20px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 680px) {
+    .doc_item,.doc_item .left_side {
+        flex-direction: column;
+    }
+    .doc_item .right_side,.doc_item .left_side img {
+        margin-right: 0px;
+    }
+    .doc_item .left_side img {
+        margin-bottom: 10px;}
+    .doc_item .left_side p {
+        margin-bottom: 10px;}
+    .modal {
+        width: 100%;
+    }
+    .fitem .arrow_down {
+        transform: rotate(-180deg);
+    }
+
+    .show-content-mob {
+        background: #FFFFFF;
+        box-shadow: 0px 20px 20px rgba(0, 63, 128, 0.05);
+        border-radius: 10px;
+
+        padding: 40px;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: -20px;
+    }
+
+    .arrow_down {
+        display: block;
+        width: 15px;
+        height: 15px;
+    }
+
+    .feature_item {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        height: 100px;
+    }
+
+    .fitem {
+        margin-bottom: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .feature_content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        /*padding-left: 30px;*/
+    }
+
+    .hidden_data {
+        background: #fff;
+        color: #000;
+    }
+
+    .f_top_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .feature_item img {
+        margin: 0;
+    }
+
+    .feature_item h3 {
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .feature_item img {
+        height: 20px;
+    }
+
+    .overlay {
+        /*display: none;*/
+    }
+
+    .only-mob {
+        display: block !important;
+        margin: 0 auto;
+    }
+
+    .h2 {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    .btns_header {
+        flex-direction: column;
+    }
+
+    .header .btn_choose_flat, .header .get_consult {
+        width: 100%;
+        padding: 20px 0;
+        margin: 10px 0;
+    }
+
+    .header h3 {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: normal;
+    }
+
+    .top_header {
+        padding: 15px 0;
+    }
+
+    .header {
+        background: none;
+        height: auto;
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+    .plan_item {
+        flex-direction: column;
+    }
+
+    .partners img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .qa-block-content_item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .qa-block-content_item .qa-item-icon {
+        padding: 0;
+        margin: 0;
+    }
+
+    .qa-block-content_item-title h3 {
+        font-size: 18px;
+    }
+
+    .middle_footer {
+        text-align: center;
+    }
+
+    .info_footer p {
+        margin: 10px 0;
+    }
+
+    .top_footer {
+        text-align: center;
+    }
+
+    .info_footer {
+        display: block;
+    }
+
+    .top_footer .get_consult {
+        padding: 15px 30px;
+    }
+
+    .mf_text {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .bottom_link {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .bottom_link a {
+        margin: 0;
+    }
+
+    .social_links {
+        margin: 0;
+    }
+
+    .bottom_social {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .feature_item, .show-content-mob {
+        max-width: 320px;
+    }
+}
