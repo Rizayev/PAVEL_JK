@@ -28,12 +28,16 @@ jQuery(document).ready(function($) {
         $('.btn_choose_flat').removeClass('white');
         $('.flat_2').addClass('white');
         $('.plan_image').hide();
+        $('.pinfo').hide();
+        $('.flat_p1').show();
         $('.plan_1').show();
     })
     $('.flat_2').click(function (){
         $('.btn_choose_flat').removeClass('white');
         $('.flat_1').addClass('white');
         $('.plan_image').hide();
+        $('.pinfo').hide();
+        $('.flat_p2').show();
         $('.plan_2').show();
     })
     if($(document).width() > 680){
