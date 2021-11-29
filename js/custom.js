@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
     });
 
     // Define click event on gallery item
-    $('.gallery_img').click(function(event) {
+    $('#gallery .gallery_img').click(function(event) {
 
         // Prevent location change
         event.preventDefault();
