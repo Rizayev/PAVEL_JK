@@ -756,42 +756,5 @@
 </div>
 
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-<div id="customMap"></div>
-<script type="text/javascript">
-    ymaps.ready(init); // когда апи готово, инициализируемя карту
-    var customMap;     // объявим переменную для карты
-    function init () { // функция инициализации
-        customMap = new ymaps.Map("customMap", { // создадим карту выведем ее в див с id="customMap"
-            center: [55.76, 37.64],             // центра карты
-            behaviors: ['default', 'scrollZoom'], // скроллинг колесом
-            zoom: 10, // масштаб карты
-            controls: ["zoomControl", "fullscreenControl"] // элементы управления
-        });
-
-        customPlacemark0 = new ymaps.Placemark([55.752577,37.632134], { // Создаем метку с координатами точки
-            balloonContent: `<h4> Заголовок метки</h4><p>Описание метки.</p>
-                <a class="customMapClose" onclick="customMap.balloon.close()">X</a>`
-             // содержимое балуна в формате html, все стили в css
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/ico.png', // картинка иконки
-            iconImageSize: [36, 36], // размер иконки в пикселях
-            iconImageOffset: [-18, -36], // позиция иконки в пикселях(считается от верхнего левого угла)
-            balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
-            balloonLayout: "default#imageWithContent", // указываем что содержимое балуна - стилизовано
-            balloonImageHref: 'img/baloon.jpg', // Картинка бэкграунд балуна
-            balloonImageOffset: [-36, -90], // смещание балуна, его необходимо подогнать
-            balloonImageSize: [270, 90], // размер картинки-бэкграунда балуна
-            balloonShadow: true
-        });
-
-        // Добавляем метки на карту
-        customMap.geoObjects.add(customPlacemark0);
-
-    }
-
-</script>
 </body>
 </html>
