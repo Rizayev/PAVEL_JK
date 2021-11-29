@@ -297,6 +297,9 @@ span.img-text:hover {
     padding: 0 !important;
     margin: 0 !important;
 }
+.tr-header{
+    background: #F2F2F2;
+}
 .graphic table thead{
     background: #007FFF;
     color: #fff;
