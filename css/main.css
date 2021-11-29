@@ -300,6 +300,13 @@ span.img-text:hover {
 .tr-header{
     background: #F2F2F2;
 }
+.tr-header-green {
+    background: #00BF5F;
+    color: #fff;
+}
+.graphic table tbody .tr-header-green * {
+    font-weight: bold !important;
+}
 .graphic table thead{
     background: #007FFF;
     color: #fff;
