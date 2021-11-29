@@ -124,7 +124,7 @@ jQuery(document).ready(function($) {
     var container = [];
 
     // Loop over gallery items and push it to the array
-    $('#gallery').find('figure').each(function() {
+    $('.gallery').find('figure').each(function() {
         var $link = $(this).find('a'),
             item = {
                 src: $link.attr('href'),
@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
     });
 
     // Define click event on gallery item
-    $('#gallery .gallery_img').click(function(event) {
+    $('.gallery .gallery_img').click(function(event) {
 
         // Prevent location change
         event.preventDefault();
