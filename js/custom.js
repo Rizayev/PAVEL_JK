@@ -113,3 +113,64 @@ jQuery(document).ready(function($) {
             }
         });
 });
+
+(function($) {
+
+    // Init empty gallery array
+    var container = [];
+
+    // Loop over gallery items and push it to the array
+    $('#gallery').find('figure').each(function() {
+        var $link = $(this).find('a'),
+            item = {
+                src: $link.attr('href'),
+                w: $link.data('width'),
+                h: $link.data('height'),
+                title: $link.data('caption')
+            };
+        container.push(item);
+    });
+
+    // Define click event on gallery item
+    $('.gallery_img').click(function(event) {
+
+        // Prevent location change
+        event.preventDefault();
+
+        // Define object and gallery options
+        var $pswp = $('.pswp')[0],
+            options = {
+                index: $(this).parent('figure').index(),
+                bgOpacity: 0.85,
+                showHideOpacity: true
+            };
+
+        // Initialize PhotoSwipe
+        var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
+        gallery.init();
+    });
+
+}(jQuery));
+
+
+
+var $reviewsSlider = $('.reviews-slider');
+if ($reviewsSlider.length) {
+    $reviewsSlider.slick({
+        accessibility: false,
+        centerMode: true,
+        slidesToShow: 5,
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                centerMode: false,
+            }
+        }]
+    });
+}
