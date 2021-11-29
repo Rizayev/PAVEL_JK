@@ -80,12 +80,17 @@
 
 /*top_header*/
 .header {
-    background-image: url('../images/bg/top-bg.jpg');
     height: 700px;
     background-repeat: no-repeat;
     padding-top: 200px;
     -webkit-background-size: cover;
     background-size: cover;
+}
+.header1{
+    background-image: url('../images/bg/top-bg.jpg');
+}
+.header2 {
+    background-image: url('../images/bg/top-bg2.jpg');
 }
 
 .header h3 {
