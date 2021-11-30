@@ -8,6 +8,13 @@ html, body,#map {
 }
 #map {
     height: 700px;
+    position: relative;
+}
+.img_map {
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+    right: 0;
 }
 
 /*colors*/

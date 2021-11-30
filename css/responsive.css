@@ -49,6 +49,9 @@
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 680px) {
+    .img_map {
+        height: 250px;
+    }
     .doc_item,.doc_item .left_side {
         flex-direction: column;
     }
