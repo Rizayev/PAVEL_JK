@@ -181,7 +181,7 @@ if ($reviewsSlider.length) {
 
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-            center: [58.029504, 38.854770],
+            center: [58.017859, 38.850923],
             zoom: 14
         }, {
             searchControlProvider: 'yandex#search'
