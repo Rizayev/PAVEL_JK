@@ -178,3 +178,214 @@ if ($reviewsSlider.length) {
         }]
     });
 }
+
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [58.029504, 38.854770],
+            zoom: 14
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'ДОМ',
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/icons/home.svg',
+            // Размеры метки.
+            iconImageSize: [60, 70],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
+
+        school = new ymaps.Placemark([58.019905, 38.854912], {
+            hintContent: 'МОУ Средняя общеобразовательная школа № 6 им. Л. И. Ошанина',
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/icons/school.svg',
+            // Размеры метки.
+            iconImageSize: [60, 70],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+
+    store = new ymaps.Placemark([58.020435045451826,38.84881089239877], {
+        hintContent: 'Дружба Супермаркет',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/store.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+
+    store2 = new ymaps.Placemark([58.02275552542117,38.84905933959078], {
+        hintContent: 'Пятёрочка Супермаркет',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/store.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+
+    store3 = new ymaps.Placemark([58.021751, 38.845269], {
+        hintContent: 'Магнит Супермаркет',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/store.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+
+    sport = new ymaps.Placemark([58.022070, 38.862568], {
+        hintContent: 'Теннисный центр Звезда',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/store.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+    det = new ymaps.Placemark([58.022170, 38.846886], {
+        hintContent: 'Детский сад № 116',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/sad.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+
+    hospital = new ymaps.Placemark([58.034537, 38.859065], {
+        hintContent: 'Поликлиническое отделение ГБУЗ ЯО Городская больница № 2 имени Н. И.Пирогова',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/hospital.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+    hospital2 = new ymaps.Placemark([58.036922, 38.849199], {
+        hintContent: 'Городская детская больница, детское поликлиническое отделение № 3',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/hospital.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+    hospital3 = new ymaps.Placemark([58.042908, 38.829940], {
+        hintContent: 'Поликлиника',
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/icons/hospital.svg',
+        // Размеры метки.
+        iconImageSize: [60, 70],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+
+
+
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(det)
+        .add(store)
+        .add(store2)
+        .add(store3)
+        .add(sport)
+        .add(hospital)
+        .add(hospital2)
+        .add(hospital3)
+        .add(school);
+});

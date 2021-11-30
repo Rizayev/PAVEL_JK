@@ -3,6 +3,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+html, body,#map {
+    width: 100%; height: 100%; padding: 0; margin: 0;
+}
+#map {
+    height: 700px;
+}
 
 /*colors*/
 .blue_1 {
